@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: white;
+  background-color: #3d6cc7;
+}
+
+h1 {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-weight: 900;
+  text-align: center;
+  padding: 30px;
+  color: orange;
+}
+
+.icon-angry {
+  margin-left: 15px;
+}
+
+.input {
+  font-size: 18px;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70vw;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.icon {
+  color: rgb(223, 221, 221);
+  font-size: 27px;
+}
+
+.input {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 10px;
+  height: 45px;
+  width: 70vw;
+  font-size: 18pxpx;
+}
+
+.finish {
+  text-decoration-line: line-through;
+}
+
+.button {
+  margin-left: 20px;
+  font-size: 16px;
+  padding: 10px;
+  background-color: #3d6cc7;
+  color: orange;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid orange;
+  width: 120px;
+  height: 45px;
+}
+
+.form {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.icon-heart {
+  margin-left: 10px;
+  color: red;
+}
+
+.trash :hover {
+  color: black;
+  cursor: pointer;
+}
+.star :hover {
+  color: orange;
+  cursor: pointer;
+}
+.angry :hover {
+  color: red;
+  cursor: pointer;
+}
+p {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 3px;
+}
+.onclick {
+  color: orange;
+}
+
+.unclick {
+  color: white;
+}
+
+.dn {
+  display: none;
+}
