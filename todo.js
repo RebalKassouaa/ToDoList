@@ -3,6 +3,7 @@ const form = document.querySelector('form');
 const input = document.querySelector('input');
 const task = document.getElementsByClassName('task');
 
+// console.log(colors);
 form.addEventListener('submit', (eo) => {
   eo.preventDefault();
   const task = `<div class="task">
@@ -87,19 +88,33 @@ container.addEventListener('click', (eo) => {
 //   eo.target.classList.remove('onclick');
 // }
 
-// const headercolors = ['#FAEBD7', '#00FFFF', '#F0F8FF'];
-// const coloretytle = Math.random(Math.round() * headercolors);
-//  = coloretytle;
+// let c = 0;
+// let timing = () => {
+//   let textheader = 'To DO List';
+//   header.innerText = textheader.slice(0, c);
+
+//   c++;
+//   if (c > textheader.length) {
+//     c = 0;
+//   }
+// };
+
+// setInterval(timing, 300);
+
+let text = 'To DO List';
+let c = 0;
+let writing = () => {
+  header.innerText = text.slice(0, c);
+  c++;
+};
+setInterval(writing, 1000);
 
 let i = 0;
-let timing = () => {
-  let textheader = 'To DO List';
-  header.innerText = textheader.slice(0, i);
-
-  i++;
-  if (i > textheader.length) {
-    i = 0;
+let fun = () => {
+  let colors = Math.random().toString(16).slice(2, 8);
+  header.style.color = `#${colors}`;
+  if (i < colors.length) {
+    i++;
   }
 };
-
-setInterval(timing, 300);
+setInterval(fun, 1000);
