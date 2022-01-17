@@ -106,6 +106,9 @@ let c = 0;
 let writing = () => {
   header.innerText = text.slice(0, c);
   c++;
+  if (c > text.length) {
+    c = 0;
+  }
 };
 setInterval(writing, 1000);
 
