@@ -86,3 +86,20 @@ container.addEventListener('click', (eo) => {
 // } else if (eo.target.className == 'icon-star icon onclick') {
 //   eo.target.classList.remove('onclick');
 // }
+
+// const headercolors = ['#FAEBD7', '#00FFFF', '#F0F8FF'];
+// const coloretytle = Math.random(Math.round() * headercolors);
+//  = coloretytle;
+
+let i = 0;
+let timing = () => {
+  let textheader = 'To DO List';
+  header.innerText = textheader.slice(0, i);
+
+  i++;
+  if (i > textheader.length) {
+    i = 0;
+  }
+};
+
+setInterval(timing, 300);
