@@ -102,15 +102,15 @@ container.addEventListener('click', (eo) => {
 // setInterval(timing, 300);
 
 let text = 'To DO List';
-let c = 0;
+let c = 1;
 let writing = () => {
   header.innerText = text.slice(0, c);
   c++;
   if (c > text.length) {
-    c = 0;
+    c = 1;
   }
 };
-setInterval(writing, 1000);
+setInterval(writing, 500);
 
 let i = 0;
 let fun = () => {
