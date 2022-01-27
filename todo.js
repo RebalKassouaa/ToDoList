@@ -42,6 +42,23 @@ container.addEventListener('click', (eo) => {
         .getElementsByClassName('paragraph')[0]
         .classList.add('finish');
       eo.target.parentElement.innerHTML = heart;
+      //
+
+      //
+
+      const creatHeart = setInterval(() => {
+        const emogy = document.createElement(`div`);
+        emogy.innerHTML = `&hearts;`;
+        header.append(emogy);
+        emogy.classList.add(`heart`);
+        emogy.style.left = `${Math.random() * 100}%`;
+        setTimeout(() => {
+          clearInterval(creatHeart);
+        }, 3000);
+        setTimeout(() => {
+          emogy.remove();
+        }, 5000);
+      }, 50);
 
       break;
 
@@ -101,23 +118,23 @@ container.addEventListener('click', (eo) => {
 
 // setInterval(timing, 300);
 
-let text = 'To DO List';
-let c = 1;
-let writing = () => {
-  header.innerText = text.slice(0, c);
-  c++;
-  if (c > text.length) {
-    c = 1;
-  }
-};
-setInterval(writing, 500);
+// let text = 'To DO List';
+// let c = 1;
+// let writing = () => {
+//   header.innerText = text.slice(0, c);
+//   c++;
+//   if (c > text.length) {
+//     c = 1;
+//   }
+// };
+// setInterval(writing, 500);
 
-let i = 0;
-let fun = () => {
-  let colors = Math.random().toString(16).slice(2, 8);
-  header.style.color = `#${colors}`;
-  if (i < colors.length) {
-    i++;
-  }
-};
-setInterval(fun, 1000);
+// let i = 0;
+// let fun = () => {
+//   let colors = Math.random().toString(16).slice(2, 8);
+//   header.style.color = `#${colors}`;
+//   if (i < colors.length) {
+//     i++;
+//   }
+// };
+// setInterval(fun, 1000);

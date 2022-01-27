@@ -123,3 +123,22 @@ p {
 .dn {
   display: none;
 }
+
+.heart {
+  color: red;
+  font-size: 50px;
+  animation: movi linear 2s forwards;
+  animation-duration: 5s;
+  position: fixed;
+  /* top: 0; */
+  left: 0px;
+}
+
+@keyframes movi {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 500vw);
+  }
+}
