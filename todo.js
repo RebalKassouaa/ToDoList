@@ -2,6 +2,21 @@ const container = document.querySelector('container');
 const form = document.querySelector('form');
 const input = document.querySelector('input');
 const task = document.getElementsByClassName('task');
+const hearts = () => {
+  const creatHeart = setInterval(() => {
+    const emogy = document.createElement(`div`);
+    emogy.innerHTML = `&hearts;`;
+    header.append(emogy);
+    emogy.classList.add(`heart`);
+    emogy.style.left = `${Math.random() * 100}%`;
+    setTimeout(() => {
+      clearInterval(creatHeart);
+    }, 3000);
+    setTimeout(() => {
+      emogy.remove();
+    }, 5000);
+  }, 50);
+};
 
 // console.log(colors);
 form.addEventListener('submit', (eo) => {
@@ -42,23 +57,7 @@ container.addEventListener('click', (eo) => {
         .getElementsByClassName('paragraph')[0]
         .classList.add('finish');
       eo.target.parentElement.innerHTML = heart;
-      //
-
-      //
-
-      const creatHeart = setInterval(() => {
-        const emogy = document.createElement(`div`);
-        emogy.innerHTML = `&hearts;`;
-        header.append(emogy);
-        emogy.classList.add(`heart`);
-        emogy.style.left = `${Math.random() * 100}%`;
-        setTimeout(() => {
-          clearInterval(creatHeart);
-        }, 3000);
-        setTimeout(() => {
-          emogy.remove();
-        }, 5000);
-      }, 50);
+      hearts();
 
       break;
 
@@ -68,6 +67,7 @@ container.addEventListener('click', (eo) => {
         .getElementsByClassName('paragraph')[0]
         .classList.remove('finish');
       const angry = `<span class="icon-angry icon"></span>`;
+
       eo.target.parentElement.innerHTML = angry;
 
       break;
